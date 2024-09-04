@@ -37,7 +37,7 @@ function App() {
 
   const removeItem = () => setItems((prev) => prev.filter((_, i) => i != 0));
   return (
-    <div className="flex justify-center items-center w-full h-screen">
+    <div className="flex flex-col justify-center items-center gap-12 w-full h-screen">
       <div className="relative w-[300px] h-[420px]">
         <Swipeable onSwipeLeft={removeItem} onSwipeRight={removeItem}>
           {items.map((image) => (
@@ -57,6 +57,13 @@ function App() {
           ))}
         </Swipeable>
       </div>
+
+      <a
+        className="text-blue-500 text-sm"
+        href="https://github.com/amirrezasalimi/React-Swipeable-Demo"
+      >
+        source code
+      </a>
     </div>
   );
 }
